@@ -1,0 +1,302 @@
+body{
+    /* height: 5000px; */
+    background: #464646;
+    
+}
+
+header{
+    /* width: 100%; non nécessaire */
+    height: 400px;
+    background-image: url(../img/header.jpg);
+    background-size: cover;
+    /* background-repeat: no-repeat; non nécessaire */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: xx-large;
+    border-radius: 5px;
+
+
+}
+
+nav{
+    border-width: 2px;
+    border-style: solid;
+    border-color: #000000;
+    border-radius: 5px;
+    
+
+}
+
+nav ul{
+    /* width: 100%; non nécessaire */
+    height: 50px;
+    font-size: 30px;
+    margin: 0px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    background: linear-gradient(deepskyblue,dodgerblue);
+    border-radius: 5px;
+
+}
+
+nav ul li a{
+    cursor: pointer;
+    text-decoration: none;
+    color: #000000;
+    text-shadow: 0 1px 0 #fff;
+
+}
+
+nav ul li a:hover{
+    background-color: #1e75aa;
+    border-radius: 7px;
+    transition: 1.5s;
+
+}
+
+input, button{
+    border-radius: 5px;
+    font-size: 13px;
+    padding: 5px;
+    margin: 2px;
+    cursor: pointer;
+
+}
+
+button:hover{
+    background-color: #efcc73;
+    transition: 1.5s;
+
+}
+
+p{
+   margin-left: 25%; 
+   margin-right: 25%;
+   background-color: #00a0eb;
+   color: #ffffff;
+   border-radius: 5px;
+   border-width: 2px;
+   border-style: solid;
+   border-color: #000000;
+   padding: 1%;
+   text-align: justify;
+
+}
+
+footer{
+    /* width: 100%; non nécessaire*/
+    height: 400px;
+    /* padding-bottom: 25px; */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    text-align: center;
+
+}
+
+
+
+
+
+#box1{
+    width: 25%;
+    margin-bottom: 45px;
+    background-image: url(../img/montagne.png);
+    background-size: cover;
+    border-radius: 5px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #000000;
+
+}
+
+#box2{
+    width: 25%;
+    margin-bottom: 45px;
+    background-image: url(../img/plage.png);
+    background-size: cover;
+    border-radius: 5px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #000000;
+
+}
+
+#box3{
+    width: 25%;
+    margin-bottom: 45px;
+    background-image: url(../img/ville.jpg);
+    background-size: cover;
+    border-radius: 5px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #000000;
+
+}
+
+footer div h2 a{
+    text-decoration: none;
+    color: #000000;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+
+}
+
+footer div div{
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+    margin-top: 350px;
+    background-color: #00a0eb;
+    border-radius: 5px;
+  
+}
+
+.zoomDiv{
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+
+}
+
+.zoomDiv:hover{
+
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+}
+
+.grayscale {
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.grayscale:hover{
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0);
+}
+
+/* bouton buger */
+.menu-burger{
+    display: none;
+    position: absolute;
+    top: 25px;
+    right: 50px;
+    cursor: pointer;
+}
+
+.menu-burger > div{
+    width: 30px;
+    height: 4px;
+    margin: 5px;
+    border-radius: 10px;
+    background: #fff;
+
+}
+
+.opacity{
+    opacity: 0; 
+    transform: translateX(-200px);
+}
+
+.opacity.scroll{
+    opacity: 1;
+    transform: none;
+    transition: 1.5s ease-in;
+}
+
+@media screen and (max-width: 480px){
+
+    header h1{
+        width: 350px;
+        height: 400px;
+        display: flex;
+        margin-left: 15px;
+        margin-top: 175px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: xx-large;
+
+    }
+
+    nav ul li a{
+        display: none;
+
+    }
+
+    nav ul li form input, button{
+        display: inline;
+        
+
+    }
+
+    p{
+       margin-left: 5px;
+       margin-right: 5px;
+     
+     }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    #box1{
+        width: 90%;
+        
+    }
+    
+    #box2{
+        width: 90%;  
+    
+    }
+    
+    #box3{
+        width: 90%;
+
+    }
+
+    .zoomDiv{
+        transform: none;
+
+    }
+
+    .grayscale{
+        filter: none;
+
+    }
+        
+    /**----menu-burger---**/
+
+    .menu-burger{
+        display: block;
+
+    }
+
+    .menu-burger .line-top{
+        outline: none;
+
+    }
+
+    .menu-burger .line-middle{
+        outline: none;
+
+    }
+
+    .menu-burger .line-bottom{
+        outline: none;
+
+    }
+}
